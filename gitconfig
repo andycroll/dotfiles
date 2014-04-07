@@ -1,0 +1,18 @@
+[push]
+  default = matching
+[mergetool]
+  keepBackup = true
+[format]
+  pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
+[heroku]
+  account = andy
+[color]
+  ui = true
+[core]
+  editor = subl
+  excludesfile = ~/.gitignore_global
+[user]
+  name = Andy Croll
+  email = andy@goodscary.com
+[branch]
+	autosetuprebase = always
