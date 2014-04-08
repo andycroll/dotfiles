@@ -1,4 +1,4 @@
-export PATH=$HOME/.rbenv/bin:/usr/local/bin:$HOME/bin:$PATH
+export PATH=/usr/local/bin:$HOME/bin:$PATH
 
 parse_git_dirty () {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
@@ -9,7 +9,7 @@ parse_git_branch () {
 export PS1='\[\033[G\]\u:\[\033[31;40m\]\w\[\033[0;33m\]$(parse_git_branch)\[\e[0m\]$ '
 
 # use sublime as an editor
-export EDITOR=subl
+export EDITOR=atom
 
 # keep TONS of history
 export HISTSIZE=4096

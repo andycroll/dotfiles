@@ -16,3 +16,5 @@
   email = andy@goodscary.com
 [branch]
 	autosetuprebase = always
+[pivotal-tracker]
+	token = d8986a0914a0dce33e17194129c4062f
