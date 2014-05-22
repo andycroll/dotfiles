@@ -1,20 +1,28 @@
 [push]
-  default = matching
-[mergetool]
-  keepBackup = true
-[format]
-  pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
-[heroku]
-  account = andy
+  default = current
 [color]
   ui = true
+[alias]
+  aa = add --all
+  ap = add --patch
+  ca = commit --amend
+  ci = commit -v
+  co = checkout
+  create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
+  delete-branch = !sh -c 'git push origin :refs/heads/$1 && git branch -D $1' -
+  merge-branch = !git checkout master && git merge @{-1}
+  pr = !hub pull-request
+  st = status
+  up = !git fetch origin && git rebase origin/master
 [core]
-  editor = subl
-  excludesfile = ~/.gitignore_global
-[user]
-  name = Andy Croll
-  email = andy@goodscary.com
+  excludesfile = ~/.gitignore
+[help]
+  autocorrect = 1
 [branch]
 	autosetuprebase = always
-[pivotal-tracker]
-	token = d8986a0914a0dce33e17194129c4062f
+[merge]
+  ff = only
+[fetch]
+  prune = true
+[include]
+  path = .gitconfig.local
