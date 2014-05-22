@@ -8,14 +8,6 @@ alias cdb='cd -'
 alias l='ls'
 alias ll='ls -alGh'
 alias ls='ls -Gh'
-alias G='| grep'
-alias M='| less'
-alias L='| wc -l'
-alias ONE="| awk '{ print \$1}'"
-alias cl='clear'
-
-# show me files matching "ls grep"
-alias lsg='ll | grep'
 
 # Remove duplicate open with items
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
@@ -24,16 +16,10 @@ alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/
 alias gz='tar -zcvf'
 
 # git
-alias g="git"
-alias gci="git pull --rebase && rake && git push"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
 # PS
 alias psg="ps aux | grep "
-alias psr='ps aux | grep ruby'
-
-# Ruby
-alias help-strftime='ruby ~/bin/help-strftime.rb'
 
 # Bundler
 alias b="bundle"
@@ -42,13 +28,9 @@ alias bake="bundle exec rake"
 alias s="bundle exec rspec"
 alias cuc="bundle exec cucumber"
 
-# Rubygems
-alias giv="gem install -v"
-
 # Rails
 alias migrate="bundle exec rake db:migrate db:test:prepare"
-alias remigrate="bundle exec rake db:migrate db:migrate:redo db:schema:dump db:test:prepare"
-alias remongrate="bundle exec rake mongoid:migrate mongoid:migrate:redo"
+alias sc='script/console'
 alias rc='be rails c'
 alias rg='be rails g'
 
@@ -70,12 +52,5 @@ alias db-pull-production='heroku db:pull --remote production --confirm `basename
 alias db-copy-production-to-staging='heroku pgbackups:restore DATABASE `heroku pgbackups:url --remote production` --remote staging  --confirm `basename $PWD`-staging'
 alias db-backup-production='heroku pgbackups:capture --remote production'
 
-# postgresql
-alias pggo="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-
 # ios simulator
 alias simulator="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
-
-# gitignore
-function gi() { curl http://gitignore.io/api/$@ ;}
