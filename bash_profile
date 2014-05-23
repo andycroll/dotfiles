@@ -20,9 +20,25 @@ function parse_git_branch {
   fi
 }
 
-function prompt_func() {
+function set_prompt() {
   PS1="${LIGHT_GRAY}\u:${RED}\w${YELLOW}$(parse_git_branch)${LIGHT_GRAY}\$${COLOR_NONE} "
 }
+
+function update_terminal_cwd() {
+  # Identify the directory using a "file:" scheme URL,
+  # including the host name to disambiguate local vs.
+  # remote connections. Percent-escape spaces.
+  local SEARCH=' '
+  local REPLACE='%20'
+  local PWD_URL="file://$HOSTNAME${PWD//$SEARCH/$REPLACE}"
+  printf '\e]7;%s\a' "$PWD_URL"
+}
+
+function prompt_func() {
+  update_terminal_cwd
+  set_prompt
+}
+
 PROMPT_COMMAND=prompt_func
 
 # use atom as an editor
