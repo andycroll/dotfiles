@@ -1,3 +1,6 @@
+# include local
+source ~/.bashrc.local
+
 # add brew to path
 export PATH=/usr/local/bin:$PATH
 
