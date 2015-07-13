@@ -4,16 +4,20 @@
   ui = true
 [alias]
   aa = add --all
+  amend = commit -a --amend
   ap = add --patch
-  ca = commit --amend
+  bclean = "!f() { git branch --merged ${1-master} | grep -vE '(master|production)' | xargs git branch -d; }; f"
   ci = commit -v
   co = checkout
   create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
   delete-branch = !sh -c 'git push origin :refs/heads/$1 && git branch -D $1' -
   merge-branch = !git checkout master && git merge @{-1}
   pr = !hub pull-request
+  save = !git add -A && git commit -m 'SAVEPOINT'
   st = status
-  up = !git fetch origin && git rebase origin/master
+  undo = reset HEAD~1 --mixed
+  up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+  wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
 [core]
   excludesfile = ~/.gitignore
 [help]
