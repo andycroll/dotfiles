@@ -1,4 +1,4 @@
-# andycrol dotfiles
+# andycroll dotfiles
 
 ## Install
 
