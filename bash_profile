@@ -54,6 +54,7 @@ export RUBYOPT
 # aliases
 if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
+  source "$HOME/.aliases.local"
 fi
 
 eval "$(/Users/andy/.ht/bin/ht init -)"
