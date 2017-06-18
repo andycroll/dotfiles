@@ -15,7 +15,7 @@
   pf = push --force-with-lease
   pr = !hub pull-request
   save = !git add -A && git commit -m 'SAVEPOINT'
-  st = status
+  st = status --short
   undo = reset HEAD~1 --mixed
   up = !git pull --rebase --prune $@ && git submodule update --init --recursive
   wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
