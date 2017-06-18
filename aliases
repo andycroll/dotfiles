@@ -24,15 +24,8 @@ alias psg="ps aux | grep "
 # Bundler
 alias b="bundle"
 alias be="bundle exec"
-alias bake="bundle exec rake"
 alias s="bundle exec rspec"
 alias cuc="bundle exec cucumber"
-
-# Rails
-alias migrate="bundle exec rake db:migrate db:test:prepare"
-alias sc='script/console'
-alias rc='be rails c'
-alias rg='be rails g'
 
 # Heroku staging
 alias staging='heroku run console --remote staging'
