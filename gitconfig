@@ -21,6 +21,8 @@
 [core]
   excludesfile = ~/.gitignore
   editor = vim
+[diff]
+  compactionHeuristic = true
 [help]
   autocorrect = 1
 [branch]
