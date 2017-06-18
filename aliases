@@ -12,6 +12,9 @@ alias ls='ls -Gh'
 # Remove duplicate open with items
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
 
+# brew
+alias brewit='brew update && brew upgrade && brew doctor && brew cleanup'
+
 # Zippin
 alias gz='tar -zcvf'
 
