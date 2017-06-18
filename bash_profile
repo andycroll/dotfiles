@@ -54,6 +54,8 @@ export RUBYOPT
 # aliases
 if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
+fi
+if [ -e "$HOME/.aliases.local" ]; then
   source "$HOME/.aliases.local"
 fi
 
