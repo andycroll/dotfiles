@@ -59,3 +59,8 @@ if [ -e "$HOME/.aliases.local" ]; then
   source "$HOME/.aliases.local"
 fi
 
+# bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+source /usr/local/etc/bash_completion.d/git-completion.bash
