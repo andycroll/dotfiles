@@ -30,6 +30,7 @@ TAGS
 tags
 .tags
 .tags_sorted_by_file
+.tags*
 
 # Vim       taken from: https://github.com/github/gitignore/blob/master/Global/vim.gitignore
 # ----------------------------------------------------------------------------------------------
