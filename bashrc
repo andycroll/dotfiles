@@ -1,5 +1,8 @@
 # include local
-source ~/.bashrc.local
+if [ -e ~/.bashrc.local ]
+then
+  source ~/.bashrc.local
+fi
 
 # add brew to path
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
