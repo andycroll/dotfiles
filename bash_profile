@@ -11,7 +11,7 @@ function parse_git_branch {
   git rev-parse --git-dir &> /dev/null
   git_status="$(git status 2> /dev/null)"
   branch_pattern="^On branch ([^${IFS}]*)"
-  if [[ ! ${git_status}} =~ "working directory clean" ]]; then
+  if [[ ! ${git_status}} =~ "working tree clean" ]]; then
     state="*"
   fi
   if [[ ${git_status} =~ ${branch_pattern} ]]; then
