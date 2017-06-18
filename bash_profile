@@ -59,4 +59,3 @@ if [ -e "$HOME/.aliases.local" ]; then
   source "$HOME/.aliases.local"
 fi
 
-eval "$(/Users/andy/.ht/bin/ht init -)"
