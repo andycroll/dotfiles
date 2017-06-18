@@ -1,3 +1,0 @@
-export POW_TIMEOUT=900
-export POW_WORKERS=1
-source /usr/local/share/chruby/chruby.sh
