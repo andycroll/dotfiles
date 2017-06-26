@@ -15,6 +15,10 @@ alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/
 # brew
 alias brewit='brew update && brew upgrade && brew doctor && brew cleanup'
 
+# highlight ruby
+alias highlight-clipboard="pbpaste | highlight --syntax=rb --style=github -O rtf | pbcopy"
+alias highlight-file="highlight --syntax=rb --style=github -O rtf"
+
 # Zippin
 alias gz='tar -zcvf'
 
