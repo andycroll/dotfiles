@@ -5,9 +5,6 @@ alias mkdir='mkdir -p'
 alias ..='cd ..'
 alias ...='../..'
 alias cdb='cd -'
-alias l='ls'
-alias ll='ls -alGh'
-alias ls='ls -Gh'
 
 # Remove duplicate open with items
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
@@ -23,16 +20,14 @@ alias highlight-file="highlight --syntax=rb --style=github -O rtf"
 alias gz='tar -zcvf'
 
 # git
+alias conflicts="git ls-files -u | awk '{print $4}' | sort -u"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
 # PS
 alias psg="ps aux | grep "
 
 # Bundler
-alias b="bundle"
-alias be="bundle exec"
 alias s="bundle exec rspec"
-alias cuc="bundle exec cucumber"
 
 # Heroku staging
 alias staging='heroku run console --remote staging'
