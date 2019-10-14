@@ -1,1 +1,1 @@
-[[ -s ~/.zshrc ]] && source ~/.zshrc
+[[ -s ~/.zshrc ]] && exec zsh
