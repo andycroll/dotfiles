@@ -20,6 +20,7 @@ plugins=(bundler
          gitfast
          jsontools
          osx
+         rails
          ruby)
 source $ZSH/oh-my-zsh.sh
 
