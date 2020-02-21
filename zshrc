@@ -4,6 +4,9 @@ then
   source ~/.zshrc.local
 fi
 
+bindkey '[C' forward-word
+bindkey '[D' backward-word
+
 # add brew to path
 export PATH=./bin:/usr/local/sbin:/usr/local/bin:$PATH
 
