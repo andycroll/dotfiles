@@ -28,7 +28,7 @@ plugins=(bundler
 source $ZSH/oh-my-zsh.sh
 
 # use atom as an editor
-export EDITOR=atom
+export EDITOR=nova
 
 # irb automatically requires rubygems
 export RUBYOPT="rubygems"
