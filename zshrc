@@ -1,7 +1,7 @@
 # include local
 if [ -e ~/.zshrc.local ]
 then
-  source ~/.zshrc.local
+  exec ~/.zshrc.local
 fi
 
 bindkey '[C' forward-word
@@ -23,12 +23,11 @@ plugins=(bundler
          gitfast
          jsontools
          osx
-         rails
          ruby)
 source $ZSH/oh-my-zsh.sh
 
-# use atom as an editor
-export EDITOR=nova
+# use nova as an editor
+export EDITOR=atom
 
 # irb automatically requires rubygems
 export RUBYOPT="rubygems"
@@ -45,4 +44,4 @@ fi
 export ARCHFLAGS="-arch x86_64"
 
 # heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH=/Users/andy/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+# HEROKU_AC_ZSH_SETUP_PATH=/Users/andy/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
