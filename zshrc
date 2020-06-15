@@ -1,3 +1,5 @@
+ZSH_DISABLE_COMPFIX=true
+DISABLE_UPDATE_PROMPT=true
 # include local
 if [ -e ~/.zshrc.local ]
 then
